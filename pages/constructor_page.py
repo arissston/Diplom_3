@@ -65,27 +65,27 @@ class ConstructorPage(BasePage):
     # прелоадер, который показывается, пока заказ оформляется
     LOADING_MODAL = (By.CSS_SELECTOR, "div[class*='Modal_modal_opened__']")
 
-    # @allure.step('Кликаем на кнопку "Заказать" в шапке')
+    @allure.step('Ожидаем видимости карточек ингридиентов')
     def wait_visibility_of_ingredients_cards(self):
         self.wait_visibility(self.INGREDIENT_CARDS)
 
-    # @allure.step('Кликаем на кнопку "Заказать" в шапке')
+    @allure.step('Кликаем на первый ингридиент')
     def click_first_ingredient(self):
         self.click(self.FIRST_INGREDIENT)
 
-    # @allure.step('Кликаем на кнопку "Заказать" в шапке')
+    @allure.step('Ожидаем видимости модального окна с деталями ингридентов')
     def wait_visibility_of_modal_with_ingredient_details(self):
         return self.wait_visibility(self.MODAL_INGREDIENT_TITLE)
 
-    # @allure.step('Кликаем на кнопку "Заказать" в шапке')
+    @allure.step('Ожидаем видимости крестика закрытия модального окна')
     def wait_visibility_of_cross_in_modal_window(self):
         self.wait_visibility(self.MODAL_CLOSE_BUTTON)
 
-    # @allure.step('Кликаем на кнопку "Заказать" в шапке')
+    @allure.step('Кликаем на крестик закрытия модального окна')
     def click_cross_in_modal_window(self):
         self.click(self.MODAL_CLOSE_BUTTON)
 
-    # @allure.step('Кликаем на кнопку "Заказать" в шапке')
+    @allure.step('Ожидаем видимости шапки конструктора')
     def wait_visibility_of_constructor_header(self):
         return self.wait_visibility(self.CONSTRUCTOR_HEADER)
 
